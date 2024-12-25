@@ -1,6 +1,6 @@
 {
   "name": "slash-path",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "type": "module",
   "description": "This library wraps the routes library and exposes the same methods with the slash method, to use slash as the default separator.",
   "keywords": [
@@ -27,20 +27,15 @@
     "type": "git",
     "url": "https://github.com/yracnet/slash-path"
   },
-  "main": "dist/index.js",
-  "module": "dist/index.cjs",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
   "types": "dist/index.d.ts",
-  "exports": {
-    ".": {
-      "require": "./dist/index.js",
-      "import": "./dist/index.cjs",
-      "types": "./dist/index.d.ts"
-    }
-  },
   "homepage": "https://github.com/yracnet/slash-path",
   "bugs": "https://github.com/yracnet/slash-path/issues",
   "scripts": {
-    "build": "tsup"
+    "build": "tsup",
+    "prepublish": "yarn build",
+    "prepack": "yarn build"
   },
   "dependencies": {},
   "peerDependencies": {},

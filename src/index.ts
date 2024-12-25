@@ -1,7 +1,7 @@
-import delegate, { FormatInputPathObject, ParsedPath } from "path";
+import delegate, { FormatInputPathObject, ParsedPath } from 'path';
 
-export const slash = (str = "") => {
-  return str.replace(/\\/g, "/");
+export const slash = (str = '') => {
+  return str.replace(/\\/g, '/');
 };
 export const normalize = (path: string): string => {
   return slash(delegate.normalize(path));
